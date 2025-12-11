@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestPro - Aprenda a Investir</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 18px rgba(255,255,255,0.15);
+    }
+    h2 {
+      color: #00ff99;
+    }
+    /* LOGIN */
+    #loginPage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background: #000;
+    }
+    #loginPage input {
+      padding: 12px;
+      width: 260px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    #loginPage button {
+      padding: 12px 20px;
+      margin-top: 15px;
+      background: #00ff99;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #mainPage { display: none; }
+  </style>
+</head>
+<body><!-- LOGIN --><div id="loginPage">
+  <h1>InvestPro</h1>
+  <p>Digite seu e-mail para entrar:</p>
+  <input type="email" id="emailInput" placeholder="Seu e-mail" />
+  <button onclick="login()">Entrar</button>
+</div><!-- PÁGINA PRINCIPAL --><div id="mainPage">
+  <header>INVESTPRO - TUDO SOBRE INVESTIMENTOS</header>  <div class="container">
+    <div class="card">
+      <h2>1. O que são investimentos?</h2>
+      <p>Investimento é quando você coloca seu dinheiro em algo esperando que ele cresça com o tempo. O objetivo é aumentar seu patrimônio.</p>
+    </div><div class="card">
+  <h2>2. Renda fixa</h2>
+  <p>São investimentos mais previsíveis, como CDB, Tesouro Direto e LCIs. Eles têm baixo risco e são ótimos para iniciantes.</p>
+</div>
+
+<div class="card">
+  <h2>3. Renda variável</h2>
+  <p>Aqui entram ações, fundos imobiliários e criptomoedas. O retorno pode ser maior, mas o risco também aumenta.</p>
+</div>
+
+<div class="card">
+  <h2>4. A importância de diversificar</h2>
+  <p>Colocar todo o dinheiro em um único investimento pode ser perigoso. Diversificar reduz riscos.</p>
+</div>
+
+<div class="card">
+  <h2>5. Fundos imobiliários</h2>
+  <p>FIIs permitem investir no mercado imobiliário com pouco dinheiro e receber rendimentos mensais.</p>
+</div>
+
+<div class="card">
+  <h2>6. Ações</h2>
+  <p>Comprar ações é se tornar sócio de uma empresa. Você lucra quando a empresa cresce ou distribui dividendos.</p>
+</div>
+
+<div class="card">
+  <h2>7. Cr
+ <script>
+  function login() {
+    const email = document.getElementById("emailInput").value;
+
+    if (email.trim() === "") {
+      alert("Digite seu e-mail para entrar!");
+      return;
+    }
+
+    // Esconde a página de login
+    document.getElementById("loginPage").style.display = "none";
+
+    // Mostra a página principal
+    document.getElementById("mainPage").style.display = "block";
+  }
+</script>
+</body>
+</html>
